@@ -1,3 +1,4 @@
+
 .main-nav{
     display: grid;
     grid-template-columns: 8rem 0fr 4fr 3fr 15rem;
@@ -6,6 +7,11 @@
     background-color:rgba(0, 0, 0, 0.869);
     align-items: center;
 } 
+/* .iimg>h2{
+  font-size: 40px;
+} */
+
+
 .main-nav2{
   /* display: flex;
   justify-content: space-around; */
@@ -40,6 +46,7 @@ text-align: center;
      /* color: beige; */
 }
 
+
 .social1{
   color: #ddd;
 }
@@ -54,7 +61,7 @@ text-align: center;
 .menubar>Link{
     text-decoration: none;
     color: aquamarine;
-    /* font-size: 40%; */
+    font-size: 40%;
 }
 .logo{
     display: grid;
@@ -62,6 +69,7 @@ text-align: center;
     /* grid-column: 1/3; */
     justify-content: center;
     align-items: center;
+    font-size: 34px;
     
 }
 .searchbar{
@@ -125,7 +133,7 @@ text-align: center;
 }
 
 .homediv1{
-  background-color: #8b0019;
+  background-color:rgba(165, 42, 42, 0.743);
   height: 280px;
   width: 100%;
   text-align: center;
@@ -142,6 +150,7 @@ text-align: center;
 
 }
 .denin>h1{
+  font-size: 30px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
   /* margin-top: 10px; */
 }
@@ -200,6 +209,7 @@ text-align: center;
 /* ghjkl */
 .ddenn1>h1{
   padding-top: 30px;
+  font-size: 30px;
 }
 
 #butr1{
@@ -222,7 +232,7 @@ text-align: center;
   margin: auto;
   width: 62%;;
   margin: auto;
-  margin-top:50px;
+  margin-top:30px;
 }
 .para>h3{
   font-family:'Times New Roman', Times, serif;
@@ -236,6 +246,13 @@ text-align: center;
 .trend{
   margin-top: 100px;
 }
+.trend>h1{
+  font-size: 30px;
+}
+.para{
+  font-size: 20px;
+}
+
 /* .startimg{
 width:10%;
 } */
@@ -265,7 +282,15 @@ width:10%;
   background-size: cover;
  
 }
-
+.fin1>h1{
+  font-size: 40px;
+}
+.fin1>h2{
+  font-size: 30px;
+}
+.fin1>h3{
+  font-size: 30px;
+}
 .ssld1{
   width: 100%;
   height: 600px;
@@ -574,21 +599,14 @@ border-top-right-radius: 20px;
   height: 800px;
   width: 100%;
 }
+
 .hhh33{
   position: absolute;
-  /* font-size: 90px;
-  font-weight: 200;
-  font-size: 2rem; */
-  /* text-transform: uppercase; */
-
-  /* -webkit-text-fill-color: transparent; */
-  /* -webkit-background-clip:text; */
   color: black;
-  /* left:-15%; */
   left:47%;
   bottom: 70%;
-  
 }
+
 #but222{
   background-color: blueviolet;
   width: 12%;
@@ -621,6 +639,7 @@ border: none;
 .pagination1{
   margin-top: 30px;
 }
+
 .bbb3{
   background-color: whitesmoke;
 color: grey;
@@ -629,4 +648,9 @@ width: 4%;
 height: 27px;
 border: gray;
 }
+
+
+
+
+
 
