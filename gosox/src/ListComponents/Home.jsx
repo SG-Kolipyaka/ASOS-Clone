@@ -19,7 +19,7 @@ const Home = () => {
     <div className='homemaindiv'>
 <h3>Limited time only. Selected styles marked down as shown.</h3>
       <div className='homediv1'>
-<Link to="/New in" style={{color:"black"}}><h1>UP TO 50% OFF <br />
+<Link to="/New in" style={{color:"black" ,fontSize:"40px",fontFamily:"cursive"}}><h1>UP TO 50% OFF <br />
 LAYERING LEGENDS! <br />
 
 COATS, HOODIES AND MORE</h1></Link>
@@ -30,20 +30,20 @@ COATS, HOODIES AND MORE</h1></Link>
 
     <div className='iimg'>
         
-       <div className='dddq'> <Link to="/men" style={{textDecoration:"none",color:"black"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_new_szn_trousers_moment_870x1110.jpg" alt="" />
-       <h2>NEW PANTS</h2>
+       <div className='dddq'> <Link to="/men" style={{textDecoration:"none",color:"black",fontSize:"20px"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_new_szn_trousers_moment_870x1110.jpg" alt="" />
+       <h2> <b>NEW PANTS</b> </h2>
        <h4>Incl. on-trend cargos, ofc</h4>
        </Link></div>
-        <div className='dddq'><Link to="/men" style={{textDecoration:"none",color:"black"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_new_szn_prints_moment_870x11101.jpg" alt="" />
-        <h2>NEW PANTS</h2>
+        <div className='dddq'><Link to="/men" style={{textDecoration:"none",color:"black",fontSize:"20px"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_new_szn_prints_moment_870x11101.jpg" alt="" />
+        <h2><b>NEW PANTS</b></h2>
        <h4>Incl. on-trend cargos, ofc</h4>
         </Link></div>
-        <div className='dddq'><Link to="/men" style={{textDecoration:"none",color:"black"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_contingency_new_in_moment_870x1110.jpg" alt="" />
-        <h2>NEW PANTS</h2>
+        <div className='dddq'><Link to="/men" style={{textDecoration:"none",color:"black",fontSize:"20px"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_contingency_new_in_moment_870x1110.jpg" alt="" />
+        <h2><b>NEW PANTS</b></h2>
        <h4>Incl. on-trend cargos, ofc</h4>
         </Link></div>
-       <div className='dddq'> <Link to="/men" style={{textDecoration:"none",color:"black"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_new_season_brights_moment_870x1110.jpg" alt="" />
-       <h2>NEW PANTS</h2>
+       <div className='dddq'> <Link to="/men" style={{textDecoration:"none",color:"black",fontSize:"20px"}}><img className='igm' src="https://content.asos-media.com/-/media/homepages/mw/2023/february/13-prime/moments/mw_global_new_season_brights_moment_870x1110.jpg" alt="" />
+       <h2><b>NEW PANTS</b></h2>
        <h4>Incl. on-trend cargos, ofc</h4>
        </Link></div>
       </div>

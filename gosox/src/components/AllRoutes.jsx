@@ -2,9 +2,10 @@ import React from 'react'
 import { Route,Routes } from 'react-router-dom'
 import Home from '../ListComponents/Home'
 import Men from '../ListComponents/Men'
+import Admin1 from '../Admin/Admin1'
 
 
-const PRoute = () => {
+const AllRoutes = () => {
   return (
     <div>
         <Routes>
@@ -13,8 +14,8 @@ const PRoute = () => {
           <Route path="/women" element={<Home/>}/>
           <Route path="/login" element={<Home/>}/>
           <Route path="/register" element={<Home/>}/>
-          <Route path="/admin" element={<Home/>}/>
-
+          
+          <Route path="/admin" element={<Admin1/>}/>
 
 
          
@@ -34,8 +35,12 @@ const PRoute = () => {
           <Route path="/Marketplace" element={<Home/>}/>
           <Route path="/Outlet" element={<Home/>}/>
         </Routes>
+
+
+        
+
     </div>
   )
 }
 
-export default PRoute
+export default AllRoutes
