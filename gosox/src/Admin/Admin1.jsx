@@ -2,13 +2,17 @@ import React from 'react'
 import { useState,useEffect } from 'react'
 import "../Css/nav.css"
 
-const initstate={
-  title:"",
-  name:"",
-  image:"",
-  price:"",
-  description:"",
-}
+
+
+  const initstate = {
+    "isNew": "",
+    "imageURL":"",
+    "name": "",
+    "price": "",
+    "rating": "",
+    "numReviews": "",
+  };
+
 
 const getData=(url)=>{
   return fetch(url).then((res)=>res.json());
@@ -29,7 +33,7 @@ const Admin1 = () => {
   const fetchdata=async()=>{
     setloading(true)
     try{
-      let data=await getData('https://636c99f691576e19e30fb69c.mockapi.io/items');
+      let data=await getData('http://localhost:8080/womens');
       setProducts(data)
       setloading(false)
     }catch(err){
@@ -39,16 +43,17 @@ setloading(false)
   }
 
 
-  const {title,name,image,price,description}=formstate
+  const {isNew, imageURL,name,price,rating,numReviews}=formstate
 
   const handelchange=(e)=>{
-    const {name,value}=e.target
-    setFormstate({...formstate,[name]:value})
+    const {type,name,value}=e.target
+    let val =type==="number"?Number(value):value
+    setFormstate({...formstate,[name]:val})
   }
 
 
   async function deletoperation(id){
-let result =await fetch(`https://636c99f691576e19e30fb69c.mockapi.io/items/`+id,{
+let result =await fetch(`http://localhost:8080/womens/`+id,{
   method:"DELETE"
 })
 result=await result.json()
@@ -58,13 +63,16 @@ fetchdata()
 
   const handelsubmit=(e)=>{
 e.preventDefault();
-fetch(`https://636c99f691576e19e30fb69c.mockapi.io/items`,{
+fetch(`http://localhost:8080/womens`,{
   method:"POST",
   headers:{
     "Content-Type": "application/json"
   },
   body:JSON.stringify(formstate)
-}).then((res)=>res.json()).then(()=>{setFormstate(initstate)}).catch((er)=>{console.log(er)})
+}).then((res)=>res.json()).then(()=>{setFormstate(initstate)
+  fetchdata()
+}).catch((er)=>{console.log(er)})
+
   }
   return (
     loading?<h1>Loading...</h1>:Error?<h1>Something went wrong</h1>:
@@ -74,34 +82,41 @@ fetch(`https://636c99f691576e19e30fb69c.mockapi.io/items`,{
 <form onSubmit={handelsubmit}>
 <h3>Only Authorised User can Acess It</h3>
   <label>
-    Title:
-    <input className='imp11' type="text" placeholder='Enter thr title' name='title' value={title} onChange={handelchange} />
+  isNew:
+    <input className='imp11' type="checkbox" placeholder='Enter thr isNew' name='isNew' value={isNew} onChange={handelchange} />
   </label>
   <br />
   <br />
   <label>
-    Name:
-    <input className='imp11' type="text" placeholder='Enter thr Name' name='name' value={name} onChange={handelchange} />
+  imageURL:
+    <input className='imp11' type="text" placeholder='Enter thr imageURL' name='imageURL' value={imageURL} onChange={handelchange} />
   </label>
   <br />
   <br />
   <label>
-    Image URL:
-    <input className='imp11' type="text" placeholder='Enter thr Image Url' name='image' value={image} onChange={handelchange}/>
+  name:
+    <input className='imp11' type="text" placeholder='Enter thr name' name='name' value={name} onChange={handelchange}/>
   </label>
   <br />
   <br />
  
   <label>
     Price:
-    <input className='imp11' type="text" placeholder='Enter thr Price' name='price' value={price} onChange={handelchange} />
+    <input className='imp11' type="number" placeholder='Enter thr Price' name='price' value={price} onChange={handelchange} />
   </label>
   <br />
   <br />
 
   <label>
-    Description:
-    <input className='imp11' type="text" placeholder='Enter thr Description' name='description' value={description} onChange={handelchange} />
+  rating:
+    <input className='imp11' type="number" placeholder='Enter thr rating' name='rating' value={rating} onChange={handelchange} />
+  </label>
+  <br />
+  <br />
+
+  <label>
+  numReviews:
+    <input className='imp11' type="number" placeholder='Enter thr numReviews' name='numReviews' value={numReviews} onChange={handelchange} />
   </label>
   <br />
   <br />
@@ -116,12 +131,14 @@ fetch(`https://636c99f691576e19e30fb69c.mockapi.io/items`,{
         {/* <!-- Dont change order of columns --> */}
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Name</th>
-            <th>Image Url</th>
+            <th>isNew</th>
+            <th>imageURL</th>
+            <th>name</th>
             <th>Price</th>
-            <th>Description</th>
+            <th>rating</th>
+            <th>numReviews</th>
             <th>Delete</th>
+
             
           </tr>
         </thead>
@@ -130,11 +147,12 @@ fetch(`https://636c99f691576e19e30fb69c.mockapi.io/items`,{
         {products.map((el)=>{
           return(
             <tr>
-              <td>{el.title}</td>
+              <td>{el.isNew}</td>
+              <td>{el.imageURL}</td>
               <td>{el.name}</td>
-              <td>{el.image}</td>
               <td>{el.price}</td>
-              <td>{el.description}</td>
+              <td>{el.rating}</td>
+              <td>{el.numReviews}</td>
               <td className='delet' onClick={()=>deletoperation(el.id)}>Delete</td>
             </tr>
           )
