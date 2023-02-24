@@ -3,6 +3,7 @@ import { Route,Routes } from 'react-router-dom'
 import Home from '../ListComponents/Home'
 import Men from '../ListComponents/Men'
 import Admin1 from '../Admin/Admin1'
+import Womens from '../Pages/Womens'
 
 
 const AllRoutes = () => {
@@ -11,7 +12,7 @@ const AllRoutes = () => {
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/men" element={<Men/>}/>
-          <Route path="/women" element={<Home/>}/>
+          <Route path="/women" element={<Womens/>}/>
           <Route path="/login" element={<Home/>}/>
           <Route path="/register" element={<Home/>}/>
           
