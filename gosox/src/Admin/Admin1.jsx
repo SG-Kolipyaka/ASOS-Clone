@@ -1,6 +1,9 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import "../Css/nav.css"
+import { useContext } from 'react'
+import { AuthContext } from "../AuthContext/AuthContext"
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -23,6 +26,7 @@ const Admin1 = () => {
   const [loading,setloading]=useState(false)
   const [Error,setError]=useState(false)
   const [products,setProducts]=useState([])
+  const {LogoutUser1}=useContext(AuthContext)
 
 
 
@@ -78,6 +82,7 @@ fetch(`http://localhost:8080/womens`,{
     loading?<h1>Loading...</h1>:Error?<h1>Something went wrong</h1>:
     <div>
       <h1>ADMIN SIDE</h1>
+<h1><NavLink to="/adminlogin" style={{color:"red",fontSize:"20px"}}><button onClick={LogoutUser1}>LOGOUT</button></NavLink></h1>
       
 <form onSubmit={handelsubmit}>
 <h3>Only Authorised User can Acess It</h3>

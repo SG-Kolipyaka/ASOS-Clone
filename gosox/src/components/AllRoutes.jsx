@@ -4,6 +4,12 @@ import Home from '../ListComponents/Home'
 import Men from '../ListComponents/Men'
 import Admin1 from '../Admin/Admin1'
 import Womens from '../Pages/Womens'
+import PrivateRoute from '../AuthContext/PrivateRoute'
+import Registration from "../Pages/Registration"
+import Login from '../Pages/Login'
+import PrivateRoute2 from '../AuthContext/PrivateRoute2'
+import AdminLogin from '../Pages/AdminLogin'
+import AdminRegistration from '../Pages/AdminRegister'
 
 
 const AllRoutes = () => {
@@ -11,12 +17,19 @@ const AllRoutes = () => {
     <div>
         <Routes>
           <Route path="/" element={<Home/>}/>
-          <Route path="/men" element={<Men/>}/>
-          <Route path="/women" element={<Womens/>}/>
-          <Route path="/login" element={<Home/>}/>
-          <Route path="/register" element={<Home/>}/>
+          <Route path="/men" element={<PrivateRoute><Men/></PrivateRoute>}/>
+          <Route path="/women" element={
+            <PrivateRoute>
+              <Womens/>
+            </PrivateRoute>
+          }/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/adminlogin" element={<AdminLogin/>}/>
+
+          <Route path="/register" element={<Registration/>}/>
+          <Route path="/adminregister" element={<AdminRegistration/>}/>
           
-          <Route path="/admin" element={<Admin1/>}/>
+          <Route path="/admin" element={<PrivateRoute2><Admin1/></PrivateRoute2>}/>
 
 
          
