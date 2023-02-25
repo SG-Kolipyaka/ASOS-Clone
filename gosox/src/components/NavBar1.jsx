@@ -5,6 +5,8 @@ import { NavLink } from 'react-router-dom'
 import {AiFillShopping,AiOutlineUser } from "react-icons/ai";
 import "../Css/nav.css"
 import {ImHeart} from "react-icons/im"
+import { useContext } from 'react';
+import { AuthContext } from '../AuthContext/AuthContext';
 // import {IoLocation} from "react-icons"
 
 
@@ -22,6 +24,7 @@ const link=[
     // {path:"/franchi",title:"FRANCHISING"}
 ]
 const Navbar1 = () => {
+    const {isAuth,LogoutUser}=useContext(AuthContext)
   return (
 <>
 <nav className='main-nav'>
@@ -60,7 +63,7 @@ const Navbar1 = () => {
 
 <div className='social-media'>
     
-        <NavLink className="social1" to="/login"><AiOutlineUser/></NavLink>
+        <NavLink  className="social1" to="/login"><button onClick={LogoutUser}>{isAuth?"Logout":<AiOutlineUser/>}</button></NavLink>
             
         
             <NavLink className="social1" to="/"><ImHeart/></NavLink>
