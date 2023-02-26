@@ -17,6 +17,7 @@ function App() {
   
    <Navbar2/>
    <AllRoutes/>
+  
 <LargeWithAppLinksAndSocial/>
   
     </div>

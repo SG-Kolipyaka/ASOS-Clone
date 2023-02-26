@@ -74,15 +74,6 @@
     },
     {
       "isNew": "",
-      "imageURL": "https://images.asos-media.com/products/topshop-broderie-lace-insert-shirred-top-in-white/202121502-2?$n_320w$&wid=317&fit=constrain",
-      "name": "GoxSOS DESIGN mini broderie",
-      "price": 11,
-      "rating": 2,
-      "numReviews": 23,
-      "id": 9
-    },
-    {
-      "isNew": "",
       "imageURL": "https://images.asos-media.com/products/rebellious-fashion-one-shoulder-crop-top-in-white/202021769-2?$n_320w$&wid=317&fit=constrain",
       "name": "Zara",
       "price": 10,
@@ -314,6 +305,35 @@
       "email": "kolipyakaSumit@gmail.com",
       "password": "Sumit@123",
       "id": 1
+    }
+  ],
+  "cart": [
+    {
+      "isNew": "",
+      "imageURL": "https://images.asos-media.com/products/asos-design-asymmetric-crop-top-with-long-sleeve-and-keyhole-in-lime/202543084-2?$n_320w$&wid=317&fit=constrain",
+      "name": "GoxSOS DESIGN mini broderie",
+      "price": 16,
+      "rating": 4.5,
+      "numReviews": 23,
+      "id": 6
+    },
+    {
+      "isNew": "",
+      "imageURL": "https://images.asos-media.com/products/4th-reckless-allie-crochet-pants-in-cream-part-of-a-set/203670118-2?$n_320w$&wid=317&fit=constrain",
+      "name": "GoxSOS DESIGN mini broderie",
+      "price": 21,
+      "rating": 5,
+      "numReviews": 23,
+      "id": 4
+    },
+    {
+      "isNew": "",
+      "imageURL": "https://images.asos-media.com/products/asos-design-racer-tank-in-waffle-in-white/203902899-2?$n_320w$&wid=317&fit=constrain",
+      "name": "Zara",
+      "price": 16,
+      "rating": 4.5,
+      "numReviews": 66,
+      "id": 14
     }
   ]
 }

@@ -5,14 +5,13 @@ import {
     Image,
     Badge,
     useColorModeValue,
-    Icon,
+    // Icon,
     chakra,
     Tooltip,
- 
+    // SimpleGrid 
   } from '@chakra-ui/react';
-  import { NavLink } from 'react-router-dom';
   import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
-  import { FiShoppingCart } from 'react-icons/fi';
+//   import { FiShoppingCart } from 'react-icons/fi';
   
   function Rating({ rating, numReviews }) {
     return (
@@ -41,14 +40,15 @@ import {
       </Box>
     );
   }
-  
-  function ProductAddToCart({data,handelsub}) {
+//   ,DeleteOpe
+// ,quantity,handelquantity
+  function CartCard({data,quantity,handelquantity,DeleteOpe}) {
     return (
- 
+        // <SimpleGrid  columns={[1, 2, 3, 4, 5, 6]} spacing={3}>
         <Box
           bg={useColorModeValue('white', 'gray.800')}
           maxW="sm"
-
+        //   width="100%"
           borderWidth="1px"
           rounded="lg"
           shadow="lg"
@@ -63,12 +63,12 @@ import {
             />
            )} 
   
-         <NavLink to={`/users/${data?.id}`}> <Image
+          <Image
             src={data.imageURL}
             alt={`Picture of ${data.name}`}
             roundedTop="lg"
             width="100%"
-          /></NavLink>
+          />
   
           <Box p="6">
             <Box d="flex" alignItems="baseline">
@@ -93,9 +93,8 @@ import {
                 placement={'top'}
                 color={'gray.800'}
                 fontSize={'1.2em'}>
+                <chakra.a href={'#'} display={'flex'}  >
                  
-                <chakra.a href={'#'} display={'flex'}   >
-                  <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} onClick={()=>handelsub(data.id)} />
                 </chakra.a>
               </Tooltip>
             </Flex>
@@ -110,10 +109,33 @@ import {
               </Box>
             </Flex>
           </Box>
+          {/* onClick={()=>DeleteOpe(data.id)} */}
+
+    <button  style={{backgroundColor:"brown",color:"white",width:"26%",height:"40px",borderRadius:"10px",marginBottom:"10px"}} onClick={()=>DeleteOpe(data.id)}>Remove</button> 
+           <br/>
+     <button  style={{backgroundColor:"teal",color:"black",width:"15%",height:"30px",borderRadius:"10px",marginBottom:"10px",marginRight:"25px"}} onClick={()=>handelquantity(data.id,-1)}>-</button>
+          <button style={{backgroundColor:"orange",color:"black",width:"15%",height:"30px",borderRadius:"10px",marginBottom:"10px",marginRight:"25px"}}>{quantity}</button>
+          
+          <button style={{backgroundColor:"teal",color:"black",width:"15%",height:"30px",borderRadius:"10px",marginBottom:"10px"}} onClick={()=>handelquantity(data.id,1)} >+</button> 
         </Box>
-    
+        // </SimpleGrid>
     
     );
   }
   
-  export default ProductAddToCart;
+  export default CartCard;
+
+
+// import React from 'react'
+
+// const CartCard = ({data}) => {
+//   return (
+//     <div>
+//       <img src={data.imageURL} alt=""/>
+//       <h3>{data.name}</h3>
+//       <h3>{data.price}</h3>
+//     </div>
+//   )
+// }
+
+// export default CartCard
