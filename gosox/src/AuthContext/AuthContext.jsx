@@ -5,7 +5,7 @@ import { useState,createContext } from 'react'
 export const AuthContext=createContext();
 
 const AuthContextProvider = ({children}) => {
-    const [isAuth,SetAuth]=useState(false);
+    const [isAuth,SetAuth]=useState(true);
     const [isAuth21,SetAuth1]=useState(false);
 
     const LoginUser=()=>{

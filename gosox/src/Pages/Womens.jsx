@@ -1,5 +1,3 @@
-
-
 import {SimpleGrid,Spinner,Select,Button} from "@chakra-ui/react"
 import {useReducer,useEffect,useState} from "react"
 import axios from "axios";
@@ -55,9 +53,15 @@ _order:order
 }
 
 
-
-
-
+const initstate=  {
+  "isNew": "",
+  "imageURL": "",
+  "name": "",
+  "price": "",
+  "rating": "",
+  "numReviews": "",
+  
+}
 
 
 
@@ -67,12 +71,30 @@ export default function Womens() {
   const {data,isLoading,error} =state
   const [order,setOrder]=useState("asc")
   const [page,setPage]=useState(1)
-  // const [total,setTotal]=useState(0)
+  const [carrr,setCarr]=useState(initstate)
 
 
+  const handelsub=(id)=>{
+    return axios.get(`http://localhost:8080/womens/${id}`).then((res)=> axios({
+      method:'post',
+      url:`http://localhost:8080/cart`,
+      data:res.data
+     }))
+  }
 
+console.log(carrr)
+
+
+// const handelsub=(idd)=>{
+//   getCartItems(idd)
+//  return axios({
+//   method:'post',
+//   url:`http://localhost:8080/cart`,
+//   data:carrr
+//  })
   
-   
+//     }
+
 
 
   const fetchData=(order,page)=>{
@@ -80,7 +102,7 @@ export default function Womens() {
    getData({order:order,page:page}).then((res)=>{
       dispatch({type:"FETCH_SUCESS",payload:res.data});
       console.log(res.data)
-      // setTotal(res.data.length)
+     
     })
     .catch((err)=>{
       dispatch({type:"FETCH_FAILURE",payload:err.message});
@@ -89,8 +111,6 @@ export default function Womens() {
 
 useEffect(()=>{
  fetchData(order,page)
-
-//  console.log(total)
 },[order,page])
 
 
@@ -183,29 +203,30 @@ if(error){
   </div>
 <hr />
 
+{/* handelsub={handelsub} */}
+{/* getCartItems={getCartItems}  */}
+
 <div className="mediaquery">
     {isLoading?<Spinner/>:<SimpleGrid columns={{base:1,md:2,lg:3,xl:4,"2xl":8}} spacing={7}>
         {data.map((el)=>
-        <ProductAddToCart key={el.id} data={el}/>)}
+      <ProductAddToCart key={el.id} data={el} handelsub={handelsub}/>)}
         </SimpleGrid>}
 </div>
 <br />
+
+
 
 <div>
 <Button disabled={page===1} colorScheme='blue' mr="10px" onClick={()=>setPage(page-1)} >Previous</Button>
 <Button colorScheme='red'>{page}</Button>
 <Button  colorScheme='blue' ml="10px" onClick={()=>setPage(page+1)}>Next</Button> 
-
-
-
 </div>
 <br />
 </div>
     
-       
-
-
-
-    
   );
 }
+
+
+
+

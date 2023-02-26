@@ -7,6 +7,8 @@ import "../Css/nav.css"
 import {ImHeart} from "react-icons/im"
 import { useContext } from 'react';
 import { AuthContext } from '../AuthContext/AuthContext';
+
+
 // import {IoLocation} from "react-icons"
 
 
@@ -67,7 +69,7 @@ const Navbar1 = () => {
             
         
             <NavLink className="social1" to="/"><ImHeart/></NavLink>
-            <NavLink className="social1" to="/"><AiFillShopping/></NavLink>
+            <NavLink className="social1" to="/cart"><AiFillShopping/></NavLink>
             
        
 </div>

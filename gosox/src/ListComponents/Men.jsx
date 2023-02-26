@@ -43,7 +43,7 @@ const reducer = (state,action) => {
   }
 };
 
-const getData=({order,page})=>{
+const getData=({order,page})=>{ 
  return axios.get(`http://localhost:8080/mens`,{
 params:{
   _page:page,
@@ -62,7 +62,7 @@ _order:order
 
 
 
-export default function Womens() {
+export default function Men() {
   const [state,dispatch] =useReducer(reducer,initialState);
   const {data,isLoading,error} =state
   const [order,setOrder]=useState("asc")

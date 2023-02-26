@@ -10,6 +10,11 @@ import Login from '../Pages/Login'
 import PrivateRoute2 from '../AuthContext/PrivateRoute2'
 import AdminLogin from '../Pages/AdminLogin'
 import AdminRegistration from '../Pages/AdminRegister'
+import Cart from '../Pages/Cart'
+import Speciuser from '../Pages/Speciuser'
+
+
+
 
 
 const AllRoutes = () => {
@@ -30,6 +35,8 @@ const AllRoutes = () => {
           <Route path="/adminregister" element={<AdminRegistration/>}/>
           
           <Route path="/admin" element={<PrivateRoute2><Admin1/></PrivateRoute2>}/>
+          <Route path="/cart" element={<PrivateRoute><Cart/></PrivateRoute>}/>
+          <Route path="/users/:id" element={<Speciuser/>}/>
 
 
          

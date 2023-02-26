@@ -27,7 +27,7 @@ export const fetchData = async () => {
 function Login(){
     const [search,setSearch]=React.useState(inistate);
     const [info,setInfo]=React.useState([]);
-    const [info2,setInfo2]=React.useState([]);
+    // const [info2,setInfo2]=React.useState([]);
     const {isAuth,LoginUser,LogoutUser}=useContext(AuthContext)
     const [Auth,SetAuth2]=useState(false)
 
@@ -67,7 +67,7 @@ function Login(){
         const flydata=info.filter((elem)=>{
           return(elem.email.toLowerCase().includes(search.email.toLowerCase()) && elem.password.toLowerCase().includes(search.password.toLowerCase()));
         });
-        setInfo2(flydata); 
+        // setInfo2(flydata); 
        
         console.log(flydata.length)
 
@@ -88,10 +88,10 @@ function Login(){
         // <Navigate to="/women"/>
         
      }
-    //  if(isAuth){
-    //     <Navigate to="/women"/>
-    //  }
-    //  else{
+     if(isAuth){
+      return  <Navigate to="/women"/>
+     }
+     else{
         return (
             
             <div>
@@ -121,7 +121,7 @@ function Login(){
           )
   
 
-    //  }
+     }
 
        
 }
