@@ -3,12 +3,12 @@
 
 
 
-# Infinity Stone  (CaratLane- Clone)
+# Goxos (ASOS- Clone)
 
-CaratLane is an Indian physical and online jewelry retailer, headquartered in Chennai, India
-Where you can purchase Rings , Earrings ect
+ASOS is an E-commerce US Based website where Users can Buy the Various Products Related To cloths,
+Specially related to Womens and Kids.
 
-A Full Stack , Collaborative project built by a team of 5 executed in 5 days.
+A Full Stack , Individual project built from Scratch with in 5 days.
 
 
 ## Demo  🎥
@@ -21,9 +21,9 @@ A Full Stack , Collaborative project built by a team of 5 executed in 5 days.
 - Redux
 - Chakra -UI
 - CSS
-- MongoDB
-- Mongoose
-_ MongoDb Atlas
+- HTML
+- JSON Server
+
 
 ## Snapshots :camera:
 * Landing page (Home page) 
@@ -83,27 +83,16 @@ _ MongoDb Atlas
 
 
 
-## Contributors  😇
-
-
-- 👤 [Vivek Singh Tomar](https://github.com/VivekTomar03)
-
--     Key-Responsibility -> Complete Admin Side
-
-- 👤 [Anubhav Dixit](https://github.com/Anubhav0391)
-
--     Key-Responsibility -> Complete Backend
-
-- 👤 [Mrunali Gabhane](https://github.com/MrunaliGabhane)
-
--     Key-Responsibility -> UI for Cartpage , Paymentpage , Addresspage 
-
-- 👤 [Ritik Verma](https://github.com/Ritikve03)
--     Key-Responsibility ->Homepage , Login and Signup page
-
-- 👤 [Sumit Kolipyaka](https://github.com/SG-Kolipyaka)
-
--     Key-Responsibility ->Productspage , SingalProductpage
+## Features  😇
+-   Complete Admin Side
+-   UI for Cartpage 
+-   Paymentpage 
+-   Addresspage 
+-   Homepage
+-   Login
+-   Signup page
+-   Productspage
+-   SingalProductpage
 
 
 
