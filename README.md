@@ -28,8 +28,9 @@ A Full Stack , Individual project built from Scratch with in 5 days.
 ## Snapshots :camera:
 * Landing page (Home page) 
 
+![Screenshot (595)](https://github.com/SG-Kolipyaka/concerned-toothpaste-1616/assets/113519884/1c1eb9b4-7954-4d68-9c7a-28462081facf)
 
-<img src="./Frontend/infinity-stone/src/ImageData/home.png"/>
+
 
 * Sign-In page
  
