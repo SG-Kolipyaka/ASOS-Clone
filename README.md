@@ -26,6 +26,9 @@ A Full Stack , Individual project built from Scratch with in 5 days.
 
 
 ## Snapshots :camera:
+
+![Screenshot (594)](https://github.com/SG-Kolipyaka/concerned-toothpaste-1616/assets/113519884/8d1bd0e5-0926-4753-9ccf-6ff8220fd21d)
+
 * Landing page (Home page) 
 
 ![Screenshot (595)](https://github.com/SG-Kolipyaka/concerned-toothpaste-1616/assets/113519884/1c1eb9b4-7954-4d68-9c7a-28462081facf)
@@ -35,52 +38,27 @@ A Full Stack , Individual project built from Scratch with in 5 days.
 * Sign-In page
  
 
-<img src="./Frontend/infinity-stone/src/ImageData/signin.png"/>
+![Screenshot (599)](https://github.com/SG-Kolipyaka/concerned-toothpaste-1616/assets/113519884/1e9d608d-88e4-4d60-91fd-213ea9f435c6)
+
 
 * Landing page (Rings page) 
 
-<img src="./Frontend/infinity-stone/src/ImageData/rings.png"/>
-
-
-* Landing page (Earrings page) 
 
 
 <img src="./Frontend/infinity-stone/src/ImageData/earrings.png"/>
 
 
 
+![Screenshot (596)](https://github.com/SG-Kolipyaka/concerned-toothpaste-1616/assets/113519884/d9fe88fe-b308-4d76-bffe-98d7b3d3cd4d)
 
-* Single Product page
-
-
-
-<img src="./Frontend/infinity-stone/src/ImageData/singal.png"/>
-
-
-* Cart page
-
- 
-
-<img src="./Frontend/infinity-stone/src/ImageData/cartpage.png"/>
-
-* Payment page
+* Admin SignUP page
 
 
 
-<img src="./Frontend/infinity-stone/src/ImageData/payment.png"/>
-
-* Admin Signin page
+![Screenshot (597)](https://github.com/SG-Kolipyaka/concerned-toothpaste-1616/assets/113519884/58e5e9f5-62a1-448c-9f04-5aa0ad26cb35)
 
 
-<img src="./Frontend/infinity-stone/src/ImageData/adminlogin.png"/>
-
-
-*Admin page
-
-
-<img src="./Frontend/infinity-stone/src/ImageData/adminpage.png"/>
-
-
+* Products Page
 
 
 
