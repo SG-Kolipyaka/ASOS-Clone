@@ -41,7 +41,7 @@ const AdminRegistration = () => {
       
         const handelsubmit=(e)=>{
       e.preventDefault();
-      fetch(`http://localhost:8080/adminuser`,{
+      fetch(`https://asos-backend-s4z0.onrender.com/adminuser`,{
         method:"POST",
         headers:{
           "Content-Type": "application/json"

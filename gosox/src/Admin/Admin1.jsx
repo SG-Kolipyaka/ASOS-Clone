@@ -37,7 +37,7 @@ const Admin1 = () => {
   const fetchdata=async()=>{
     setloading(true)
     try{
-      let data=await getData('http://localhost:8080/womens');
+      let data=await getData('https://asos-backend-s4z0.onrender.com/womens');
       setProducts(data)
       setloading(false)
     }catch(err){
@@ -57,7 +57,7 @@ setloading(false)
 
 
   async function deletoperation(id){
-let result =await fetch(`http://localhost:8080/womens/`+id,{
+let result =await fetch(`https://asos-backend-s4z0.onrender.com/womens/`+id,{
   method:"DELETE"
 })
 result=await result.json()
@@ -67,7 +67,7 @@ fetchdata()
 
   const handelsubmit=(e)=>{
 e.preventDefault();
-fetch(`http://localhost:8080/womens`,{
+fetch(`https://asos-backend-s4z0.onrender.com/womens`,{
   method:"POST",
   headers:{
     "Content-Type": "application/json"

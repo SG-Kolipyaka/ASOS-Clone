@@ -11,7 +11,7 @@ const Cart = () => {
 
 
     const getCartAdd1=()=>{
-        return axios.get(`http://localhost:8080/cart`).then((res)=> setCart1(res.data))
+        return axios.get(`https://asos-backend-s4z0.onrender.com/cart`).then((res)=> setCart1(res.data))
        }
  
        useEffect(()=>{
@@ -34,7 +34,7 @@ const handelquantity=(id,val)=>{
 
 async function DeleteOpe(id){
   
-  let result =await fetch(`http://localhost:8080/cart/`+id,{
+  let result =await fetch(`https://asos-backend-s4z0.onrender.com/cart/`+id,{
   method:"DELETE"
 })
 result=await result.json()

@@ -9,7 +9,7 @@ import { AuthContext } from '../AuthContext/AuthContext';
 export const fetchData = async () => {
     // make fetch request to the mentioned api and return the result here
     try{
-      const res=await fetch(`http://localhost:8080/users`);
+      const res=await fetch(`https://asos-backend-s4z0.onrender.com/users`);
       const data=await res.json();
       return data;
   

@@ -42,7 +42,7 @@ const reducer = (state,action) => {
 };
 
 const getData=({order,page})=>{
- return axios.get(`http://localhost:8080/womens`,{
+ return axios.get(`https://asos-backend-s4z0.onrender.com/womens`,{
 params:{
   _page:page,
   _limit:12,
@@ -75,9 +75,9 @@ export default function Womens() {
 
 
   const handelsub=(id)=>{
-    return axios.get(`http://localhost:8080/womens/${id}`).then((res)=> axios({
+    return axios.get(`https://asos-backend-s4z0.onrender.com/womens/${id}`).then((res)=> axios({
       method:'post',
-      url:`http://localhost:8080/cart`,
+      url:`https://asos-backend-s4z0.onrender.com/cart`,
       data:res.data
      }))
   }
@@ -89,7 +89,7 @@ console.log(carrr)
 //   getCartItems(idd)
 //  return axios({
 //   method:'post',
-//   url:`http://localhost:8080/cart`,
+//   url:`https://asos-backend-s4z0.onrender.com/cart`,
 //   data:carrr
 //  })
   

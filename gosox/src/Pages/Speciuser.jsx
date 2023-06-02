@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 
 const getdata=((id)=>{
-  return fetch(`http://localhost:8080/womens/${id}`).then((res)=>res.json());
+  return fetch(`https://asos-backend-s4z0.onrender.com/womens/${id}`).then((res)=>res.json());
 });
 
 

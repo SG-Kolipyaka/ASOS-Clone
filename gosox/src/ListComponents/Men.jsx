@@ -44,7 +44,7 @@ const reducer = (state,action) => {
 };
 
 const getData=({order,page})=>{ 
- return axios.get(`http://localhost:8080/mens`,{
+ return axios.get(`https://asos-backend-s4z0.onrender.com/mens`,{
 params:{
   _page:page,
   _limit:12,

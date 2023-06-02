@@ -41,7 +41,7 @@ const Registration = () => {
       
         const handelsubmit=(e)=>{
       e.preventDefault();
-      fetch(`http://localhost:8080/users`,{
+      fetch(`https://asos-backend-s4z0.onrender.com/users`,{
         method:"POST",
         headers:{
           "Content-Type": "application/json"
